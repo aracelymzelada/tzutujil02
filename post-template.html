@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- ✏️ CAMBIA: título del post -->
+  <title>Título del Post | Cultura Tz'utujil</title>
+  <!-- ✏️ CAMBIA: descripción corta para Google y redes sociales -->
+  <meta name="description" content="Descripción breve del artículo para Google y redes sociales.">
+  <meta property="og:title" content="Título del Post | Cultura Tz'utujil">
+  <meta property="og:description" content="Descripción breve del artículo.">
+  <!-- ✏️ CAMBIA: imagen de portada para redes sociales -->
+  <meta property="og:image" content="https://idiomatzutujil.site/assets/img/TU-IMAGEN.jpg">
+  <meta property="og:type" content="article">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{
+      --tierra:#006989;
+      --jade:#006989;
+      --jade-claro:#4e9b8b;
+      --jade-suave:#d8f3dc;
+      --ocre:#fee47f;
+      --ocre-claro:#fef3d4;
+      --humo:#f7f3ee;
+      --carbon:#1a1a1a;
+      --gris-medio:#6b6b6b;
+      --blanco:#ffffff;
+      --borde:#d8f3dc;
+      --radio:10px;
+      --sombra:0 4px 24px rgba(0,105,137,.10);
+      --sombra-lg:0 12px 40px rgba(0,105,137,.14);
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'Source Serif 4',serif;background:var(--humo);color:var(--carbon);line-height:1.7;overflow-x:hidden}
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+
+    /* ── TOP BAR ── */
+    .top-bar{background:linear-gradient(135deg,#006989 0%,#fee47f 60%,#006989 100%);display:flex;align-items:center;justify-content:space-between;padding:.6rem 2rem;gap:1rem}
+    .top-bar .logo{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--blanco);font-weight:700;letter-spacing:.02em}
+    .social-icons{display:flex;gap:.6rem;align-items:center}
+    .social-icons a{opacity:.85;transition:opacity .2s;display:flex;align-items:center}
+    .social-icons a:hover{opacity:1}
+    .social-icons img{width:22px;height:22px;filter:brightness(0) invert(1)}
+    .subscribe-button{background:var(--ocre);color:var(--tierra);padding:.4rem 1rem;border-radius:20px;font-size:.82rem;font-weight:600;font-family:'Source Serif 4',serif;transition:all .2s;white-space:nowrap}
+    .subscribe-button:hover{background:var(--blanco)}
+
+    /* ── NAVBAR ── */
+    .navbar{background:var(--blanco);display:flex;align-items:center;justify-content:space-between;padding:.7rem 2rem;box-shadow:0 2px 10px rgba(0,0,0,.1);position:sticky;top:0;z-index:100}
+    .navbar .logo{font-family:'Playfair Display',serif;font-size:.95rem;color:var(--tierra);font-weight:700}
+    .nav-links{display:flex;list-style:none;gap:.2rem;align-items:center}
+    .nav-links a{color:var(--carbon);font-size:.88rem;padding:.4rem .75rem;border-radius:5px;transition:all .2s;font-family:'Source Serif 4',serif}
+    .nav-links a:hover{background:var(--jade-suave);color:var(--jade)}
+    .nav-links a.activo-nav{color:var(--jade);font-weight:600;border-bottom:2px solid var(--jade);border-radius:0}
+    .hamburger{display:none;font-size:1.6rem;cursor:pointer;color:var(--tierra);line-height:1;padding:.2rem .4rem;background:none;border:none}
+
+    @media(max-width:768px){
+      .hamburger{display:block}
+      .top-bar .logo{display:none}
+      .nav-links{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--blanco);box-shadow:0 8px 20px rgba(0,0,0,.15);padding:1rem;gap:.3rem;z-index:200}
+      .nav-links.show{display:flex}
+      .nav-links a{display:block;padding:.65rem 1rem}
+    }
+
+    /* ── ARTICLE LAYOUT ── */
+    .article-wrap{max-width:780px;margin:0 auto;padding:2.5rem 1.5rem 4rem}
+
+    /* ── BREADCRUMB ── */
+    .breadcrumb{font-size:.8rem;color:var(--gris-medio);margin-bottom:1.5rem}
+    .breadcrumb a{color:var(--jade);transition:opacity .2s}
+    .breadcrumb a:hover{opacity:.7}
+    .breadcrumb span{margin:0 .4rem}
+
+    /* ── POST HEADER ── */
+    .post-header{margin-bottom:2rem}
+    .post-tag{display:inline-block;background:var(--jade-suave);color:var(--jade);font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.25rem .7rem;border-radius:3px;text-transform:uppercase;margin-bottom:.8rem}
+    .post-header h1{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,4vw,2.4rem);color:var(--tierra);line-height:1.25;margin-bottom:.8rem}
+    .post-meta{font-size:.82rem;color:var(--gris-medio);font-style:italic}
+    .post-meta strong{font-style:normal;color:var(--carbon)}
+
+    /* ── POST IMAGE ── */
+    .post-cover{width:100%;border-radius:var(--radio);overflow:hidden;margin-bottom:2rem;box-shadow:var(--sombra-lg)}
+    .post-cover img{width:100%;height:380px;object-fit:cover}
+    /* Si no tienes imagen, usa este placeholder: */
+    .post-cover-placeholder{width:100%;height:280px;border-radius:var(--radio);background:linear-gradient(135deg,var(--jade-suave),var(--ocre-claro));display:flex;align-items:center;justify-content:center;font-size:5rem;margin-bottom:2rem;box-shadow:var(--sombra)}
+
+    /* ── POST CONTENT ── */
+    .post-content{font-size:1rem;line-height:1.9;color:var(--carbon)}
+    .post-content h2{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--tierra);margin:2rem 0 .8rem}
+    .post-content h3{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--jade-claro);margin:1.5rem 0 .6rem}
+    .post-content p{margin-bottom:1.2rem}
+    .post-content strong{color:var(--tierra)}
+    .post-content em{color:var(--jade-claro)}
+    .post-content blockquote{border-left:4px solid var(--ocre);background:var(--ocre-claro);padding:1rem 1.4rem;border-radius:0 var(--radio) var(--radio) 0;margin:1.5rem 0;font-style:italic;color:var(--carbon)}
+    .post-content ul,.post-content ol{padding-left:1.5rem;margin-bottom:1.2rem}
+    .post-content li{margin-bottom:.4rem}
+    .post-content img{border-radius:var(--radio);margin:1.5rem 0;box-shadow:var(--sombra)}
+
+    /* ── BACK LINK ── */
+    .back-link{display:inline-flex;align-items:center;gap:.4rem;color:var(--jade);font-size:.88rem;font-weight:600;margin-top:2.5rem;border-bottom:1.5px solid transparent;transition:border-color .2s,gap .2s}
+    .back-link:hover{border-color:var(--jade);gap:.7rem}
+
+    /* ── FOOTER ── */
+    footer{background:var(--tierra);color:rgba(255,255,255,.7);text-align:center;padding:1.5rem;font-size:.82rem}
+
+    @media(max-width:600px){
+      .article-wrap{padding:1.5rem 1rem 3rem}
+      .post-cover img{height:220px}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="social-icons">
+      <a href="https://www.instagram.com/idiomatzutujil/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <img src="assets/img/instagram.svg" alt="Instagram">
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=100065151015711" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <img src="assets/img/facebook.svg" alt="Facebook">
+      </a>
+    </div>
+    <div class="logo">Idioma maya Tz'utujil</div>
+    <a class="subscribe-button" href="https://wa.me/50244725900" target="_blank" rel="noopener noreferrer">Clases Online</a>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">Idioma Tz'utujil Guatemala</div>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Abrir menú">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="tienda.html">Tienda</a></li>
+      <li><a href="gramatica.html">Idioma</a></li>
+      <li><a href="cultura.html" class="activo-nav">Cultura</a></li>
+      <li><a href="tienda.html">Nosotros</a></li>
+    </ul>
+  </nav>
+
+  <article class="article-wrap">
+
+    <!-- BREADCRUMB -->
+    <nav class="breadcrumb" aria-label="Ruta de navegación">
+      <a href="index.html">Inicio</a>
+      <span>›</span>
+      <a href="cultura.html">Cultura</a>
+      <span>›</span>
+      <!-- ✏️ CAMBIA: nombre corto del post -->
+      Título del post
+    </nav>
+
+    <!-- POST HEADER -->
+    <header class="post-header">
+      <!-- ✏️ CAMBIA: categoría del post (Tradiciones, Historia, Arte, etc.) -->
+      <span class="post-tag">Categoría</span>
+      <!-- ✏️ CAMBIA: título completo del post -->
+      <h1>Título completo del artículo va aquí</h1>
+      <p class="post-meta">
+        Por <strong>Martha A. Zelada</strong> ·
+        <!-- ✏️ CAMBIA: fecha de publicación -->
+        dd de mes de 2025
+      </p>
+    </header>
+
+    <!-- IMAGEN DE PORTADA -->
+    <!-- OPCIÓN A: Si tienes imagen, usa esto y borra OPCIÓN B -->
+    <div class="post-cover">
+      <!-- ✏️ CAMBIA: ruta y descripción de tu imagen -->
+      <img src="assets/img/TU-IMAGEN.jpg" alt="Descripción de la imagen">
+    </div>
+
+    <!-- OPCIÓN B: Si no tienes imagen, usa esto y borra OPCIÓN A -->
+    <!-- <div class="post-cover-placeholder">🌿</div> -->
+
+    <!-- CONTENIDO DEL POST -->
+    <div class="post-content">
+
+      <!-- ✏️ ESCRIBE TU ARTÍCULO AQUÍ -->
+      <!-- Ejemplo de estructura que puedes usar: -->
+
+      <p>Párrafo de introducción. Aquí escribes la idea principal del artículo y enganchas al lector desde el inicio.</p>
+
+      <h2>Primer subtítulo</h2>
+      <p>Desarrollo del primer tema. Puedes escribir tantos párrafos como necesites.</p>
+      <p>Otro párrafo con más información.</p>
+
+      <blockquote>
+        Una cita o frase destacada que quieras resaltar puede ir aquí.
+      </blockquote>
+
+      <h2>Segundo subtítulo</h2>
+      <p>Desarrollo del segundo tema.</p>
+
+      <!-- Ejemplo de lista -->
+      <ul>
+        <li>Punto importante uno</li>
+        <li>Punto importante dos</li>
+        <li>Punto importante tres</li>
+      </ul>
+
+      <h2>Conclusión</h2>
+      <p>Párrafo final que cierra el artículo y puede invitar al lector a seguir explorando el sitio.</p>
+
+    </div>
+
+    <!-- LINK DE REGRESO -->
+    <a href="cultura.html" class="back-link">← Volver a Cultura</a>
+
+  </article>
+
+  <footer>
+    <p>&copy; <span id="anio-actual"></span> Idioma maya Tz'utujil. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    document.getElementById('anio-actual').textContent = new Date().getFullYear();
+
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('show');
+    }
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.addEventListener('click', () => {
+        document.querySelector('.nav-links').classList.remove('show');
+      });
+    });
+  </script>
+
+</body>
+</html>

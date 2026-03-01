@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="assets/img/favicon.png" type="image/png" sizes="32x32">
+  <link rel="canonical" href="https://idiomatzutujil.site">
+  <title>Inicio | Idioma maya Tz'utujil</title>
+  <meta name="description" content="Aprende el idioma maya Tz'utujil con recursos educativos, artículos culturales, y clases en línea. Descubre vocabulario, gramática, y tradiciones vivas.">
+  <meta name="keywords" content="idioma tz'utujil, aprender tz'utujil, maya guatemala, cultura maya, clases online, vocabulario tz'utujil, gramática tz'utujil">
+  <meta name="author" content="Martha A Zelada">
+  <meta property="og:title" content="Aprende el idioma maya Tz'utujil">
+  <meta property="og:description" content="Clases, recursos y cultura para conocer el idioma Tz'utujil desde cero.">
+  <meta property="og:image" content="https://idiomatzutujil.site/assets/img/portada1.webp">
+  <meta property="og:url" content="https://idiomatzutujil.site">
+  <meta property="og:type" content="website">
+  <meta name="p:domain_verify" content="c853f585400fdb62001850f2f54ba106"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GRST46F9YE"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-GRST46F9YE');</script>
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{
+      --verde:#006989;--verde-osc:#006989;--verde-med:#4e9b8b;
+      --verde-claro:#d8f3dc;--verde-bg:#f7f3ee;
+      --dorado:#fee47f;--dorado-lt:#fef3d4;
+      --crema:#f7f3ee;--calido:#f7f3ee;
+      --texto:#1a1a1a;--texto-mid:#6b6b6b;--texto-light:#6b6b6b;
+      --borde:#d8f3dc;--blanco:#fff;
+      --sombra:0 4px 24px rgba(0,105,137,.10);
+      --sombra-lg:0 12px 40px rgba(0,105,137,.14);
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'Nunito',sans-serif;background:var(--crema);color:var(--texto);line-height:1.6;overflow-x:hidden}
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+
+    /* TOP BAR */
+    .top-bar{background:linear-gradient(135deg, #006989 0%, #fee47f 60%, #006989 100%);padding:.5rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    .top-bar .social-icons{display:flex;gap:.8rem;align-items:center}
+    .top-bar .social-icons a{opacity:.8;transition:opacity .2s;display:flex;align-items:center}
+    .top-bar .social-icons a:hover{opacity:1}
+    .top-bar .social-icons img{width:20px;height:20px;filter:brightness(10)}
+    .top-bar .brand-name{font-family:'Lora',serif;font-size:.9rem;color:var(--verde-claro);letter-spacing:.06em}
+    .top-bar .btn-clases{background:var(--dorado);color:var(--verde-osc);padding:.35rem 1.1rem;border-radius:20px;font-size:.82rem;font-weight:700;letter-spacing:.04em;transition:background .3s,transform .2s;white-space:nowrap}
+    .top-bar .btn-clases:hover{background:var(--dorado-lt);transform:translateY(-1px)}
+
+    /* NAVBAR */
+    .navbar{position:sticky;top:0;z-index:999;background:rgba(250,247,240,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--borde);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;transition:box-shadow .3s}
+    .navbar.scrolled{box-shadow:var(--sombra)}
+    .navbar .logo{font-family:'Lora',serif;font-size:1.1rem;font-weight:700;color:var(--verde-osc);padding:1rem 0;white-space:nowrap}
+    .navbar .logo span{color:var(--dorado)}
+    .nav-links{display:flex;list-style:none;gap:.2rem;align-items:center}
+    .nav-links a{font-size:.88rem;font-weight:600;color:var(--texto-mid);padding:.5rem .8rem;border-radius:6px;letter-spacing:.03em;transition:color .2s,background .2s;white-space:nowrap}
+    .nav-links a:hover,.nav-links a.active{color:var(--verde);background:var(--verde-bg)}
+    .hamburger{display:none;font-size:1.6rem;cursor:pointer;color:var(--verde-osc);padding:.5rem;border-radius:6px;transition:background .2s;line-height:1;background:none;border:none}
+    .hamburger:hover{background:var(--verde-bg)}
+    .nav-mobile{display:none;flex-direction:column;background:var(--blanco);border-bottom:1px solid var(--borde);padding:1rem 1.5rem;gap:.2rem;box-shadow:var(--sombra)}
+    .nav-mobile.open{display:flex}
+    .nav-mobile a{font-size:1rem;font-weight:600;color:var(--texto-mid);padding:.7rem 1rem;border-radius:8px;transition:background .2s,color .2s}
+    .nav-mobile a:hover{background:var(--verde-bg);color:var(--verde)}
+    .nav-mobile .mobile-cta{background:var(--verde);color:white!important;text-align:center;margin-top:.5rem}
+    .nav-mobile .mobile-cta:hover{background:var(--verde-med)!important}
+
+    /* FEATURED */
+    .featured-section{max-width:1280px;margin:2rem auto;padding:0 1.5rem}
+    .featured-grid{display:grid;grid-template-columns:1fr 340px;grid-template-rows:auto auto;gap:1.2rem}
+    .main-article{grid-row:1/3;position:relative;border-radius:12px;overflow:hidden;box-shadow:var(--sombra-lg);display:block;transition:transform .3s}
+    .main-article:hover{transform:translateY(-3px)}
+    .main-article img{width:100%;height:460px;object-fit:cover;transition:transform .5s}
+    .main-article:hover img{transform:scale(1.03)}
+    .main-article .overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,105,137,.92) 0%,rgba(0,105,137,.3) 50%,transparent 100%)}
+    .main-article .info{position:absolute;bottom:0;left:0;right:0;padding:2rem 2rem 1.8rem}
+    .main-article .info h1{font-family:'Lora',serif;font-size:clamp(1.3rem,2.5vw,1.8rem);font-weight:700;color:white;line-height:1.25;margin:.5rem 0}
+    .main-article .info p{color:rgba(255,255,255,.65);font-size:.83rem}
+    .side-article{border-radius:10px;overflow:hidden;box-shadow:var(--sombra);display:flex;flex-direction:column;background:white;transition:transform .3s,box-shadow .3s;border:1px solid var(--borde)}
+    .side-article:hover{transform:translateY(-3px);box-shadow:var(--sombra-lg)}
+    .side-article img{width:100%;height:150px;object-fit:cover;transition:transform .4s}
+    .side-article:hover img{transform:scale(1.04)}
+    .side-article .info{padding:1rem 1.2rem 1.3rem;flex:1}
+    .side-article .info h3{font-family:'Lora',serif;font-size:.98rem;font-weight:600;color:var(--texto);line-height:1.35;margin:.4rem 0 .3rem}
+    .side-article .info p{font-size:.78rem;color:var(--texto-light)}
+    .tag{display:inline-block;background:var(--verde);color:white;font-size:.68rem;font-weight:700;letter-spacing:.1em;padding:.2rem .6rem;border-radius:3px;text-transform:uppercase}
+    .tag.cultura{background:#4e9b8b}
+    .tag.material{background:#006989}
+
+    /* AWARENESS */
+    .awareness-strip{background:linear-gradient(135deg, #4e9b8b, #fbe27f);padding:.9rem 2rem;text-align:center}
+    .awareness-strip p{color:white;font-size:.88rem;font-weight:500;line-height:1.5}
+    .awareness-strip strong{color:var(--dorado-lt)}
+
+    /* SHARED */
+    .section-title{font-family:'Lora',serif;font-size:clamp(1.5rem,3vw,2rem);font-weight:700;color:var(--verde-osc);margin-bottom:.4rem}
+    .section-title em{font-style:italic;color:var(--verde-med)}
+    .section-label{font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--verde-med);margin-bottom:.5rem}
+
+    /* STORE */
+    .store-section{max-width:1280px;margin:3rem auto;padding:0 1.5rem}
+    .store-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem}
+    .store-header a{font-size:.85rem;font-weight:600;color:var(--verde);border-bottom:1.5px solid var(--verde);transition:color .2s}
+    .store-header a:hover{color:var(--verde-med)}
+    .store-wrapper{position:relative;display:flex;align-items:center;gap:.5rem}
+    .store-carousel{display:flex;gap:1.2rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.5rem 0 1rem;scrollbar-width:none;flex:1}
+    .store-carousel::-webkit-scrollbar{display:none}
+    .store-item{flex:0 0 220px;scroll-snap-align:start;background:white;border-radius:10px;overflow:hidden;box-shadow:var(--sombra);display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s;border:1px solid var(--borde)}
+    .store-item:hover{transform:translateY(-4px);box-shadow:var(--sombra-lg)}
+    .store-item img{width:100%;height:160px;object-fit:cover;transition:transform .4s}
+    .store-item:hover img{transform:scale(1.05)}
+    .store-item .info{padding:1rem 1.1rem 1.2rem;flex:1;display:flex;flex-direction:column;gap:.3rem}
+    .store-item .info h3{font-family:'Lora',serif;font-size:.95rem;font-weight:600;color:var(--texto);line-height:1.3}
+    .store-item .info p{font-size:.8rem;color:var(--verde);font-weight:600;margin-top:auto}
+    .arrow{background:white;border:1.5px solid var(--borde);width:38px;height:38px;border-radius:50%;font-size:1.4rem;cursor:pointer;flex-shrink:0;display:flex;align-items:center;justify-content:center;color:var(--verde-osc);transition:all .2s;box-shadow:var(--sombra)}
+    .arrow:hover{background:var(--verde);color:white;border-color:var(--verde)}
+
+    /* LEARN */
+    .idioma-section{background:var(--verde-bg);padding:4rem 1.5rem}
+    .idioma-inner{max-width:1280px;margin:0 auto}
+    .idioma-section .section-header{margin-bottom:2rem}
+    .idioma-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+    .idioma-card{background:white;border-radius:10px;overflow:hidden;box-shadow:var(--sombra);border:1px solid var(--borde);transition:transform .3s,box-shadow .3s;display:flex;flex-direction:column}
+    .idioma-card:hover{transform:translateY(-5px);box-shadow:var(--sombra-lg)}
+    .idioma-card img{width:100%;height:170px;object-fit:cover;transition:transform .4s}
+    .idioma-card:hover img{transform:scale(1.04)}
+    .idioma-card-body{padding:1.5rem;flex:1;display:flex;flex-direction:column}
+    .idioma-card-body h3{font-family:'Lora',serif;font-size:1.1rem;font-weight:700;color:var(--verde-osc);margin-bottom:.5rem}
+    .idioma-card-body p{font-size:.88rem;color:var(--texto-mid);line-height:1.7;flex:1;margin-bottom:1.2rem}
+    .idioma-card-body a{display:inline-flex;align-items:center;gap:.4rem;font-size:.85rem;font-weight:700;color:var(--verde);border-bottom:1.5px solid transparent;transition:border-color .2s,gap .2s;width:fit-content}
+    .idioma-card-body a:hover{border-color:var(--verde);gap:.7rem}
+
+    /* PRESERVE */
+    .preservar-section{background:linear-gradient(135deg, #4e9b8b 0%, #005a75 60%, #4e9b8b 100%);padding:4.5rem 1.5rem}
+    .preservar-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+    .preservar-texto .section-label{color:var(--verde-claro)}
+    .preservar-texto .section-title{color:white}
+    .preservar-texto .section-title em{color:var(--dorado-lt)}
+    .preservar-texto p{color:var(--verde-claro);font-size:.95rem;line-height:1.85;margin-top:1rem}
+    .preservar-cards{display:flex;flex-direction:column;gap:1rem}
+    .pres-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:1.3rem 1.5rem;display:flex;gap:1rem;align-items:flex-start;transition:background .3s}
+    .pres-card:hover{background:rgba(78,155,139,.12)}
+    .pres-card .icon{font-size:1.4rem;flex-shrink:0;margin-top:.1rem}
+    .pres-card h4{color:white;font-size:.9rem;font-weight:700;margin-bottom:.25rem}
+    .pres-card p{color:var(--verde-claro);font-size:.83rem;line-height:1.65}
+
+    /* ABOUT */
+    .nosotros-section{max-width:1280px;margin:0 auto;padding:4rem 1.5rem}
+    .nosotros-grid{display:grid;grid-template-columns:1fr 380px;gap:4rem;align-items:center}
+    .nosotros-texto .section-label{color:var(--verde-med)}
+    .nosotros-texto p{font-size:.95rem;color:var(--texto-mid);line-height:1.85;margin-top:.9rem}
+    .nosotros-texto .firma{font-family:'Lora',serif;font-style:italic;color:var(--verde);font-size:1rem;margin-top:1.5rem}
+    .nosotros-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem}
+    .badge-tag{background:var(--verde-bg);border:1px solid var(--borde);color:var(--verde);font-size:.78rem;font-weight:600;padding:.3rem .8rem;border-radius:20px}
+    .nosotros-img-wrap{position:relative}
+    .nosotros-img-wrap img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:8px 60px 8px 8px;box-shadow:var(--sombra-lg)}
+    .no-photo-placeholder{width:100%;aspect-ratio:4/5;border-radius:8px 60px 8px 8px;background:linear-gradient(135deg, #4e9b8b, #db8055);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;color:white;text-align:center;padding:2rem;box-shadow:var(--sombra-lg)}
+    .no-photo-placeholder .ph-icon{font-size:4rem;opacity:.6}
+    .no-photo-placeholder p{font-family:'Lora',serif;font-style:italic;font-size:1.1rem;opacity:.8;color:var(--verde-claro)}
+    .since-badge{position:absolute;bottom:-1rem;left:-1rem;background:var(--dorado);color:var(--verde-osc);width:100px;height:100px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:.8rem;box-shadow:0 6px 24px rgba(254,228,127,.45)}
+    .since-badge .num{font-family:'Lora',serif;font-size:1.6rem;font-weight:700;line-height:1}
+    .since-badge .lbl{font-size:.6rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;line-height:1.3;margin-top:.2rem}
+
+    /* ONG */
+    .ong-section{background:linear-gradient(135deg, #fee47f, #4e9b8b);padding:4rem 1.5rem;border-top:1px solid var(--borde);border-bottom:1px solid var(--borde)}
+    .ong-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+    .ong-texto p{font-size:.93rem;color:var(--texto-mid);line-height:1.85;margin-top:.8rem}
+    .ong-creds{display:flex;flex-direction:column;gap:1rem}
+    .ong-cred{background:white;border-radius:8px;padding:1.1rem 1.4rem;display:flex;gap:.9rem;align-items:flex-start;border:1px solid var(--borde);box-shadow:var(--sombra);transition:transform .2s}
+    .ong-cred:hover{transform:translateX(4px)}
+    .ong-cred .cred-icon{font-size:1.3rem;flex-shrink:0}
+    .ong-cred h4{font-size:.88rem;font-weight:700;color:var(--verde-osc);margin-bottom:.2rem}
+    .ong-cred p{font-size:.82rem;color:var(--texto-mid);line-height:1.6}
+    .btn-verde{display:inline-flex;align-items:center;gap:.5rem;background:var(--verde);color:white;padding:.8rem 1.8rem;border-radius:6px;font-weight:700;font-size:.88rem;letter-spacing:.04em;margin-top:1.5rem;transition:background .3s,transform .2s}
+    .btn-verde:hover{background:var(--verde-med);transform:translateY(-2px)}
+
+    /* FACEBOOK */
+    .facebook-section{background:var(--verde-bg);padding:4rem 1.5rem}
+    .facebook-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+    .fb-texto p{font-size:.93rem;color:var(--texto-mid);line-height:1.85;margin-top:.8rem}
+    .fb-stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin:1.5rem 0}
+    .fb-stat{background:white;border-radius:8px;padding:1rem 1.2rem;border:1px solid var(--borde);box-shadow:var(--sombra)}
+    .fb-stat .num{font-family:'Lora',serif;font-size:1.6rem;font-weight:700;color:var(--verde-osc)}
+    .fb-stat .lbl{font-size:.75rem;color:var(--texto-light);margin-top:.1rem}
+    .btn-facebook{display:inline-flex;align-items:center;gap:.7rem;background:#1877F2;color:white;padding:.8rem 1.8rem;border-radius:6px;font-weight:700;font-size:.88rem;transition:background .3s,transform .2s}
+    .btn-facebook:hover{background:#0c5dc9;transform:translateY(-2px)}
+    .fb-preview{background:white;border-radius:10px;overflow:hidden;box-shadow:var(--sombra-lg);border:1px solid var(--borde)}
+    .fb-preview-header{background:var(--verde-osc);padding:1rem 1.3rem;display:flex;align-items:center;gap:.8rem}
+    .fb-avatar{width:36px;height:36px;border-radius:50%;background:var(--verde-med);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+    .fb-pname{color:white;font-size:.88rem;font-weight:700}
+    .fb-phandle{color:rgba(183,228,199,.7);font-size:.73rem}
+    .fb-preview-body{padding:1.2rem}
+    .fb-preview-body p{font-size:.88rem;color:var(--texto-mid);line-height:1.7;margin-bottom:1rem}
+    .fb-word-card{background:var(--verde-bg);border-radius:8px;padding:1.2rem;text-align:center;border:1px solid var(--borde)}
+    .fb-word{font-family:'Lora',serif;font-size:2rem;font-weight:700;color:var(--verde-osc)}
+    .fb-translation{font-size:.82rem;color:var(--texto-mid);margin-top:.3rem}
+
+    /* SOCIAL ICONS REDES */
+    .social-icons-redes{display:flex;gap:.8rem;align-items:center}
+    .social-icons-redes a{opacity:.8;transition:opacity .2s;display:flex;align-items:center}
+    .social-icons-redes a:hover{opacity:1}
+    .social-icons-redes img{width:32px;height:32px;}
+
+    /* CONTACT */
+    .contacto-section{max-width:1280px;margin:0 auto;padding:4rem 1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+    .contacto-mensaje p{font-size:.93rem;color:var(--texto-mid);line-height:1.8;margin-top:.8rem}
+    .social-links-list{display:flex;flex-direction:column;gap:.7rem;margin-top:1.8rem}
+    .social-link-item{display:flex;align-items:center;gap:.9rem;background:white;border:1px solid var(--borde);border-radius:8px;padding:.9rem 1.2rem;font-size:.88rem;font-weight:600;color:var(--texto);box-shadow:var(--sombra);transition:transform .2s,background .2s}
+    .social-link-item:hover{background:var(--verde-osc);color:white;transform:translateX(4px)}
+    .social-link-item img{width:22px;height:22px;flex-shrink:0}
+    .contacto-info-box{background:white;border-radius:10px;padding:2.5rem;border:1px solid var(--borde);box-shadow:var(--sombra-lg)}
+    .contacto-info-box h3{font-family:'Lora',serif;font-size:1.4rem;color:var(--verde-osc);margin-bottom:1.2rem}
+    .contacto-info-box p{font-size:.9rem;color:var(--texto-mid);line-height:1.7;padding:.7rem 0;border-bottom:1px solid var(--borde)}
+    .contacto-info-box p:last-of-type{border-bottom:none}
+    .contacto-info-box a{color:var(--verde);font-weight:600}
+    .boton-contacto{display:inline-flex;align-items:center;gap:.5rem;background:#25D366;color:white;padding:.9rem 2rem;border-radius:6px;font-weight:700;font-size:.9rem;margin-top:1.5rem;transition:background .3s,transform .2s}
+    .boton-contacto:hover{background:#1faa52;transform:translateY(-2px)}
+
+    /* FOOTER */
+    footer{background:linear-gradient(135deg, #4e9b8b 0%, #005a75 60%, #4e9b8b 100%);padding:3rem 1.5rem 1.5rem}
+    .footer-grid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,.1)}
+    .footer-brand .logo-footer{font-family:'Lora',serif;font-size:1.1rem;font-weight:700;color:white;margin-bottom:.8rem}
+    .footer-brand .logo-footer span{color:var(--dorado)}
+    .footer-brand p{font-size:.83rem;color:rgba(255,255,255,.5);line-height:1.8}
+    .footer-col h4{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color: #fee47f;font-weight:700;margin-bottom:1rem}
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+    .footer-col a{font-size:.85rem;color:rgba(255,255,255,.5);transition:color .2s}
+    .footer-col a:hover{color:white}
+    .footer-bottom{max-width:1280px;margin:1.5rem auto 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem}
+    .footer-bottom p{font-size:.8rem;color:rgba(255,255,255,.3)}
+    .footer-tz{font-family:'Lora',serif;font-style:italic;color:var(--verde-claro);font-size:.88rem}
+
+    /* ANIMATIONS */
+    .fade-in{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
+    .fade-in.visible{opacity:1;transform:translateY(0)}
+
+    /* RESPONSIVE */
+    @media(max-width:1024px){
+      .featured-grid{grid-template-columns:1fr 1fr}
+      .main-article{grid-row:auto;grid-column:1/-1}
+      .main-article img{height:320px}
+      .preservar-inner,.nosotros-grid,.ong-inner,.facebook-inner{grid-template-columns:1fr;gap:2.5rem}
+      .idioma-cards{grid-template-columns:1fr 1fr}
+      .footer-grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:768px){
+      .top-bar{padding:.5rem 1rem}
+      .top-bar .brand-name{display:none}
+      .navbar{padding:0 1rem}
+      .navbar .logo{font-size:.95rem}
+      .nav-links{display:none}
+      .hamburger{display:flex}
+      .featured-section{padding:0 1rem;margin:1.2rem auto}
+      .featured-grid{grid-template-columns:1fr}
+      .main-article img{height:240px}
+      .main-article .info{padding:1.2rem}
+      .main-article .info h1{font-size:1.15rem}
+      .store-section{padding:0 1rem}
+      .store-item{flex:0 0 180px}
+      .idioma-section{padding:3rem 1rem}
+      .idioma-cards{grid-template-columns:1fr}
+      .preservar-section{padding:3rem 1rem}
+      .ong-section{padding:3rem 1rem}
+      .ong-inner{grid-template-columns:1fr}
+      .nosotros-section{padding:3rem 1rem}
+      .nosotros-grid{grid-template-columns:1fr}
+      .no-photo-placeholder{aspect-ratio:3/2;border-radius:8px}
+      .facebook-section{padding:3rem 1rem}
+      .facebook-inner{grid-template-columns:1fr}
+      .contacto-section{grid-template-columns:1fr;padding:3rem 1rem;gap:2.5rem}
+      .footer-grid{grid-template-columns:1fr;gap:2rem}
+      .footer-bottom{flex-direction:column;text-align:center}
+    }
+    @media(max-width:480px){
+      .top-bar .btn-clases{font-size:.75rem;padding:.3rem .8rem}
+      .main-article img{height:200px}
+      .fb-stats-grid{grid-template-columns:1fr 1fr}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="social-icons">
+      <a href="https://www.instagram.com/idiomatzutujil/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <img src="assets/img/instagram.svg" alt="Instagram">
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=100065151015711" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <img src="assets/img/facebook.svg" alt="Facebook">
+      </a>
+    </div>
+    <span class="brand-name">Idioma maya Tz'utujil</span>
+    <a class="btn-clases" href="https://wa.me/50244725900" target="_blank" rel="noopener noreferrer">Clases aqui</a>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Navegación principal">
+    <div class="logo">Idioma <span>Tz'utujil</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Inicio</a></li>
+      <li><a href="tienda.html">Tienda</a></li>
+      <a href="gramatica.html#practica">Idioma</a>
+      <li><a href="cultura.html">Cultura</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Abrir menú" aria-expanded="false" id="hamburger-btn">☰</button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <nav class="nav-mobile" id="nav-mobile" aria-label="Menú móvil">
+    <a href="index.html">Inicio</a>
+    <a href="tienda.html">Tienda</a>
+    <a href="gramatica.html#practica">Idioma</a>
+    <a href="gramatica.html">Cultura</a>
+    <a href="https://wa.me/50244725900" target="_blank" class="mobile-cta">Clases aqui</a>
+  </nav>
+
+  <main>
+
+    <!-- FEATURED -->
+    <section class="featured-section" aria-label="Artículos destacados">
+      <div class="featured-grid">
+        <a href="gramatica.html" class="main-article fade-in">
+          <img src="assets/img/portada1.webp" alt="Lago Atitlán - Aprende Tz'utujil" loading="eager">
+          <div class="overlay"></div>
+          <div class="info">
+            <span class="tag">Idioma</span>
+            <h1>Aprende el idioma maya Tz'utujil desde cero</h1>
+            <p>Publicado el 23 de junio de 2025</p>
+          </div>
+        </a>
+        <a href="cultura.html" class="side-article fade-in">
+          <img src="assets/img/cultura1.webp" alt="Tradiciones tz'utujiles" loading="lazy">
+          <div class="info">
+            <span class="tag cultura">Cultura</span>
+            <h3>5 tradiciones tz'utujiles que siguen vivas hoy</h3>
+            <p>23 junio 2025</p>
+          </div>
+        </a>
+        <a href="tienda.html" class="side-article fade-in">
+          <img src="assets/img/material1.webp" alt="Material didáctico Tz'utujil" loading="lazy">
+          <div class="info">
+            <span class="tag material">Material</span>
+            <h3>Nuevo cuaderno de ejercicios para primer ciclo</h3>
+            <p>23 junio 2025</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- AWARENESS -->
+    <div class="awareness-strip">
+      <p>El <strong>Tz'utujil</strong> es un idioma maya en riesgo — menos de 100,000 hablantes activos. <strong>Cada palabra que aprendemos es un acto de preservación.</strong></p>
+    </div>
+
+    <!-- STORE -->
+    <section class="store-section" id="tienda" aria-label="Tienda de materiales">
+      <div class="store-header">
+        <div>
+          <p class="section-label">Materiales didácticos</p>
+          <h2 class="section-title">Tienda</h2>
+        </div>
+        <a href="tienda.html">Ver todo →</a>
+      </div>
+      <div class="store-wrapper">
+        <button class="arrow" onclick="scrollStore(-1)" aria-label="Anterior">‹</button>
+        <div class="store-carousel" id="storeCarousel">
+          <a href="tienda.html" class="store-item fade-in">
+            <img src="assets/img/material1.webp" alt="Cuaderno de ejercicios" loading="lazy">
+            <div class="info"><span class="tag material">Material</span><h3>Cuaderno de ejercicios 1</h3><p>Ver más →</p></div>
+          </a>
+          <a href="tienda.html" class="store-item fade-in">
+            <img src="assets/img/material02.webp" alt="Tarjetas de vocabulario" loading="lazy">
+            <div class="info"><span class="tag material">Material</span><h3>Tarjetas de vocabulario</h3><p>Ver más →</p></div>
+          </a>
+          <a href="tienda.html" class="store-item fade-in">
+            <img src="assets/img/material03.webp" alt="Posters culturales" loading="lazy">
+            <div class="info"><span class="tag material">Material</span><h3>Posters culturales</h3><p>Ver más →</p></div>
+          </a>
+          <a href="tienda.html" class="store-item fade-in">
+            <img src="assets/img/material04.webp" alt="Guía para docentes" loading="lazy">
+            <div class="info"><span class="tag material">Material</span><h3>Guía para docentes</h3><p>Ver más →</p></div>
+          </a>
+          <a href="tienda.html" class="store-item fade-in">
+            <img src="assets/img/material05.webp" alt="Lecturas en Tz'utujil" loading="lazy">
+            <div class="info"><span class="tag material">Material</span><h3>Lecturas en Tz'utujil</h3><p>Ver más →</p></div>
+          </a>
+        </div>
+        <button class="arrow" onclick="scrollStore(1)" aria-label="Siguiente">›</button>
+      </div>
+    </section>
+
+    <!-- LEARN -->
+    <section class="idioma-section" aria-label="Aprende Tz'utujil">
+      <div class="idioma-inner">
+        <div class="section-header fade-in">
+          <p class="section-label">Recursos de aprendizaje</p>
+          <h2 class="section-title">Aprende <em>Tz'utujil</em></h2>
+        </div>
+        <div class="idioma-cards">
+          <div class="idioma-card fade-in">
+            <img src="assets/img/gramatica.webp" alt="Gramática Tz'utujil" loading="lazy">
+            <div class="idioma-card-body">
+              <h3>Gramática</h3>
+              <p>Conoce cómo funciona el idioma: verbos, estructura, pronombres, consonantes glotalizadas y más.</p>
+              <a href="gramatica.html">Explorar →</a>
+            </div>
+          </div>
+          <div class="idioma-card fade-in">
+            <img src="assets/img/vocabulario.webp" alt="Vocabulario Tz'utujil" loading="lazy">
+            <div class="idioma-card-body">
+              <h3>Vocabulario</h3>
+              <p>Descubre palabras organizadas por temas: familia, comida, naturaleza y el Lago Atitlán.</p>
+              <a href="gramatica.html">Explorar →</a>
+            </div>
+          </div>
+          <div class="idioma-card fade-in">
+            <img src="assets/img/hojas.webp" alt="Hojas de trabajo" loading="lazy">
+            <div class="idioma-card-body">
+              <h3>Hojas de trabajo</h3>
+              <p>Descarga recursos imprimibles para estudiar o enseñar en clase. Perfectos para maestros.</p>
+              <a href="gramatica.html">Explorar →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRESERVE -->
+    <section class="preservar-section" aria-label="Por qué preservar el Tz'utujil">
+      <div class="preservar-inner">
+        <div class="preservar-texto fade-in">
+          <p class="section-label">Preservación lingüística</p>
+          <h2 class="section-title">¿Por qué importa <em>preservar</em> el Tz'utujil?</h2>
+          <p>Cuando un idioma desaparece, no solo se pierden palabras — se pierden cosmovisiones enteras, formas únicas de entender el mundo y la identidad de un pueblo.</p>
+          <p>Empecé este proyecto en 2021 porque vi cómo, incluso en mi propia familia, el Tz'utujil estaba dejando de hablarse. No podía quedarme de brazos cruzados.</p>
+        </div>
+        <div class="preservar-cards fade-in">
+          <div class="pres-card"><span class="icon"></span><div><h4>Patrimonio reconocido</h4><p>El Tz'utujil es reconocido por la Academia de Lenguas Mayas de Guatemala como patrimonio lingüístico.</p></div></div>
+          <div class="pres-card"><span class="icon"></span><div><h4>Identidad intergeneracional</h4><p>Cada palabra es un lazo entre abuelos y nietos, entre la comunidad y sus raíces en el Lago Atitlán.</p></div></div>
+          <div class="pres-card"><span class="icon"></span><div><h4>Diversidad lingüística global</h4><p>Cada idioma que se pierde empobrece a toda la humanidad. Preservar el Tz'utujil es una contribución al mundo.</p></div></div>
+          <div class="pres-card"><span class="icon"></span><div><h4>Derechos indígenas</h4><p>Apoyar la enseñanza del Tz'utujil es apoyar el derecho de los pueblos mayas a prosperar en su propio idioma.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="nosotros-section" id="nosotros" aria-label="Sobre el proyecto">
+      <div class="nosotros-grid">
+        <div class="nosotros-texto fade-in">
+          <p class="section-label">Sobre el proyecto</p>
+          <h2 class="section-title">Sobre el <em>Proyecto</em></h2>
+          <p>Este sitio nace del amor por el idioma maya Tz'utujil y el deseo de compartirlo con el mundo. Soy de Chicacao, con raíces en Santiago Atitlán y San Pedro La Laguna — de las familias Petzey y Creado.</p>
+          <p>Desde 2021 me dedico a crear materiales didácticos, facilitar talleres de sociolingüística y apoyar la transcripción del idioma. He colaborado con organizaciones en Estados Unidos en proyectos de documentación del Tz'utujil.</p>
+          <p>Nuestro objetivo es apoyar a docentes, estudiantes y cualquier persona interesada en aprender y preservar esta lengua viva.</p>
+          <p class="firma">— Martha A. Zelada, hablante nativa</p>
+          <div class="nosotros-tags">
+            <span class="badge-tag">Hablante nativa</span>
+            <span class="badge-tag">Sociolingüista</span>
+            <span class="badge-tag">Material didáctico</span>
+            <span class="badge-tag">Santiago Atitlán</span>
+            <span class="badge-tag">San Pedro La Laguna</span>
+            <span class="badge-tag">Desde 2021</span>
+          </div>
+        </div>
+        <img src="assets/img/martha.webp" alt="Martha A. Zelada">
+      </div>
+    </section>
+
+    <!-- ONG -->
+    <section class="ong-section" id="ong" aria-label="Para ONGs y organizaciones">
+      <div class="ong-inner">
+        <div class="ong-texto fade-in">
+          <p class="section-label">ONGs y Organizaciones</p>
+          <h2 class="section-title">Para organizaciones que <em>trabajan con comunidades mayas</em></h2>
+          <p>Si tu organización trabaja en preservación lingüística, derechos indígenas o educación bilingüe en el área de Atitlán, puedo ser una aliada estratégica con experiencia verificable.</p>
+          <p>He colaborado con organizaciones que operan en Estados Unidos en proyectos de transcripción de audio Tz'utujil al español y talleres de sociolingüística para facilitadores de otros idiomas mayas.</p>
+          <a href="https://wa.me/50244725900" target="_blank" rel="noopener noreferrer" class="btn-verde">Contactar para proyectos</a>
+        </div>
+        <div class="ong-creds fade-in">
+          <div class="ong-cred"><span class="cred-icon"></span><div><h4>Transcripción Tz'utujil → Español</h4><p>Transcripción de audio y video para proyectos de documentación y archivo lingüístico.</p></div></div>
+          <div class="ong-cred"><span class="cred-icon"></span><div><h4>Facilitación Sociolingüística</h4><p>Talleres para facilitadores de otros idiomas mayas en reconocimiento y estandarización.</p></div></div>
+          <div class="ong-cred"><span class="cred-icon"></span><div><h4>Materiales para Programas</h4><p>Desarrollo de materiales didácticos para programas de educación bilingüe intercultural.</p></div></div>
+          <div class="ong-cred"><span class="cred-icon"></span><div><h4>Hablante Nativa Verificable</h4><p>Origen familiar en Santiago Atitlán y San Pedro La Laguna — comunidades tz'utujiles de referencia.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FACEBOOK -->
+    <section class="facebook-section" id="comunidad" aria-label="Comunidad en Facebook">
+      <div class="facebook-inner">
+        <div class="fb-texto fade-in">
+          <p class="section-label">Comunidad activa</p>
+          <h2 class="section-title">Síguenos en <em>Facebook</em></h2>
+          <p>En nuestra fanpage publicamos vocabulario, historia y contenido cultural del Tz'utujil varias veces por semana. La forma más fácil de aprender algo nuevo cada día.</p>
+          <div class="fb-stats-grid">
+            <div class="fb-stat"><div class="num">+403%</div><div class="lbl">Crecimiento en 2 meses</div></div>
+            <div class="fb-stat"><div class="num">4K+</div><div class="lbl">Visualizaciones mensuales</div></div>
+            <div class="fb-stat"><div class="num">58%</div><div class="lbl">Audiencia nueva</div></div>
+            <div class="fb-stat"><div class="num">3–4x</div><div class="lbl">Posts por semana</div></div>
+          </div>
+          <div class="social-icons-redes">
+            <a href="https://www.facebook.com/profile.php?id=100065151015711" target="_blank" rel="noopener noreferrer">
+              <img src="assets/img/facebook.svg" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/idiomatzutujil/" target="_blank" rel="noopener noreferrer">
+              <img src="assets/img/instagram.svg" alt="Instagram">
+            </a>
+          </div>
+        </div>
+        <div class="fb-preview fade-in">
+          <div class="fb-preview-header">
+            <div class="fb-avatar"></div>
+            <div><div class="fb-pname">Idioma Maya Tz'utujil</div><div class="fb-phandle">idiomatzutujil.site</div></div>
+          </div>
+          <div class="fb-preview-body">
+            <p><strong>Palabra del día:</strong> <em>Ya'</em> = <strong>Agua</strong> en Tz'utujil. El nombre del Lago Atitlán es <em>Chiya'</em> — "orilla del agua". Cada palabra lleva nuestra historia. 💧 #Tzutujil #IdiomasMayas</p>
+            <div class="fb-word-card">
+              <div class="fb-word">Ya' · </div>
+              <div class="fb-translation">Agua · Water · Tz'utujil</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contacto-section" id="contacto" aria-label="Contacto">
+      <div class="contacto-mensaje fade-in">
+        <p class="section-label">Contáctanos</p>
+        <h2 class="section-title">¿Tienes preguntas o quieres <em>colaborar</em>?</h2>
+        <p>Ya seas maestro, organización, investigador o alguien que simplemente quiere aprender — me encantaría escucharte.</p>
+        <div class="social-links-list">
+          <a href="https://wa.me/50244725900" target="_blank" rel="noopener noreferrer" class="social-link-item">
+            <img src="assets/img/whatsapp.svg" alt="">
+            <span>WhatsApp: +502 4472-5900</span>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=100065151015711" target="_blank" rel="noopener noreferrer" class="social-link-item">
+            <img src="assets/img/facebook.svg" alt="">
+            <span>Facebook Fanpage</span>
+          </a>
+          <a href="https://www.instagram.com/idiomatzutujil/" target="_blank" rel="noopener noreferrer" class="social-link-item">
+            <img src="assets/img/instagram.svg" alt="">
+            <span>Instagram: @idiomatzutujil</span>
+          </a>
+        </div>
+      </div>
+      <div class="contacto-info-box fade-in">
+        <h3>Información de contacto</h3>
+        <p><strong>Ubicación:</strong> Guatemala, Guatemala</p>
+        <p><strong>Horario:</strong> Lunes a Viernes, 9am – 5pm</p>
+        <p><strong>WhatsApp:</strong> <a href="https://wa.me/50244725900" target="_blank" rel="noopener noreferrer">+502 4472-5900</a></p>
+        <p><strong>Web:</strong> <a href="https://idiomatzutujil.site">idiomatzutujil.site</a></p>
+        <a class="boton-contacto" href="https://wa.me/50244725900" target="_blank" rel="noopener noreferrer">Enviar mensaje por WhatsApp</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-footer">Idioma Maya <span>Tz'utujil</span></div>
+        <p>Preservando el idioma maya Tz'utujil a través de la educación, los materiales didácticos y el orgullo cultural. Desde las orillas del Lago Atitlán para el mundo.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Páginas</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="tienda.html">Tienda</a></li>
+          <li><a href="gramatica.html">Idioma</a></li>
+          <li><a href="cultura.html">Cultura</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Redes sociales</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/profile.php?id=100065151015711" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+          <li><a href="https://www.instagram.com/idiomatzutujil/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="https://wa.me/50244725900" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="anio-actual"></span> Idioma maya Tz'utujil. Todos los derechos reservados.</p>
+      <span class="footer-tz">"Chi ya' kanoq qa'iij" </span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("anio-actual").textContent = new Date().getFullYear();
+
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    function toggleMenu() {
+      const menu = document.getElementById('nav-mobile');
+      const btn  = document.getElementById('hamburger-btn');
+      const open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+      btn.textContent = open ? '✕' : '☰';
+    }
+    document.querySelectorAll('.nav-mobile a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('nav-mobile').classList.remove('open');
+        document.getElementById('hamburger-btn').textContent = '☰';
+        document.getElementById('hamburger-btn').setAttribute('aria-expanded', false);
+      });
+    });
+
+    function scrollStore(direction) {
+      document.getElementById('storeCarousel').scrollBy({ left: direction * 240, behavior: 'smooth' });
+    }
+    let touchStartX = 0;
+    const carousel = document.getElementById('storeCarousel');
+    carousel.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+    carousel.addEventListener('touchend', e => {
+      const diff = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) scrollStore(diff > 0 ? 1 : -1);
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
