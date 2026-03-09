@@ -1728,3 +1728,42 @@ audio { width: 100%; margin-top: 0.5rem; accent-color: var(--jade); }
 @media (max-width: 600px) {
   .cursos-grid { grid-template-columns: 1fr; }
 }
+
+/* ══════════════════════════════════
+   CULTURA PAGE
+══════════════════════════════════ */
+/* ── NOTICIAS DESTACADAS ── */
+.noticias-section{margin-bottom:3.5rem}
+.noticias-section h2{font-family:'Lora',serif;font-size:1.4rem;color:var(--tierra);margin-bottom:.4rem}
+.noticias-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:1.2rem}
+.noticia-card{background:var(--blanco);border-radius:var(--radio);overflow:hidden;border:1px solid var(--borde);box-shadow:var(--sombra);display:flex;gap:1rem;padding:1.2rem;transition:transform .25s,box-shadow .25s;align-items:flex-start}
+.noticia-card:hover{transform:translateY(-3px);box-shadow:var(--sombra-lg)}
+.noticia-fecha{font-size:.72rem;color:var(--gris-medio);font-style:italic;margin-bottom:.3rem}
+.noticia-card h3{font-family:'Lora',serif;font-size:.95rem;color:var(--carbon);margin-bottom:.3rem;line-height:1.35}
+.noticia-card p{font-size:.82rem;color:var(--gris-medio);line-height:1.6}
+.noticia-emoji{font-size:2rem;flex-shrink:0;margin-top:.2rem}
+.badge-nuevo{display:inline-block;background:var(--ocre);color:var(--carbon);font-size:.65rem;font-weight:700;padding:.15rem .5rem;border-radius:20px;letter-spacing:.05em;margin-bottom:.3rem}
+
+/* ── BLOG POSTS GRID ── */
+.posts-section h2{font-family:'Lora',serif;font-size:1.4rem;color:var(--tierra);margin-bottom:.4rem}
+.posts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem;margin-top:1.2rem}
+.post-card{background:var(--blanco);border-radius:var(--radio);overflow:hidden;border:1px solid var(--borde);box-shadow:var(--sombra);transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column}
+.post-card:hover{transform:translateY(-4px);box-shadow:var(--sombra-lg)}
+.post-card-img{width:100%;height:190px;object-fit:cover;background:linear-gradient(135deg,var(--jade-suave),var(--ocre-claro));display:flex;align-items:center;justify-content:center;font-size:3rem;transition:transform .4s}
+.post-card:hover .post-card-img{transform:scale(1.03)}
+.post-card-img img{width:100%;height:100%;object-fit:cover}
+.post-card-body{padding:1.3rem 1.4rem 1.5rem;flex:1;display:flex;flex-direction:column}
+.post-tag{display:inline-block;background:var(--jade-suave);color:var(--jade);font-size:.68rem;font-weight:700;letter-spacing:.08em;padding:.2rem .6rem;border-radius:3px;text-transform:uppercase;margin-bottom:.6rem;width:fit-content}
+.post-card-body h3{font-family:'Lora',serif;font-size:1.05rem;color:var(--carbon);margin-bottom:.5rem;line-height:1.35}
+.post-card-body p{font-size:.85rem;color:var(--gris-medio);line-height:1.7;flex:1;margin-bottom:1rem}
+.post-meta{font-size:.75rem;color:var(--gris-medio);font-style:italic;margin-bottom:.8rem}
+.post-link{display:inline-flex;align-items:center;gap:.4rem;font-size:.85rem;font-weight:600;color:var(--jade);border-bottom:1.5px solid transparent;transition:border-color .2s,gap .2s;width:fit-content}
+.post-link:hover{border-color:var(--jade);gap:.7rem}
+.post-card.proximamente{opacity:.7;cursor:default}
+.post-card.proximamente .post-link{color:var(--gris-medio);pointer-events:none}
+.badge-pronto{display:inline-block;background:var(--ocre-claro);color:var(--carbon);font-size:.65rem;font-weight:700;padding:.15rem .5rem;border-radius:20px;letter-spacing:.05em;margin-bottom:.3rem}
+
+@media(max-width:768px){
+  .noticias-grid{grid-template-columns:1fr}
+  .posts-grid{grid-template-columns:1fr}
+}
